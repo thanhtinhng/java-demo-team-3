@@ -1,0 +1,3 @@
+data type
+Tham khảo slide 2 S Learn Java Core
+Phần này không cần tập trung nhiều, chỉ cần demo cho String, Array, Date

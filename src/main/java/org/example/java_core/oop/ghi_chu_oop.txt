@@ -1,0 +1,12 @@
+OOP
+Tham khảo slide 4 & 5 S Learn Java Core
+
+kế thừa / đa hình
+ghi đè (có và không có super keyword) & nạp chồng
+Cast objects
+final keywords
+abstract class & interface
+
+có thể quyết định một pakage nào đó rồi demo cho các thứ bên trên. Ví dụ pakage quản lí nhân viên, quản lý sinh viên, ...
+abstract có thể làm động vật -> chó, mèo ,... || hình học -> vuông, tròn,... (tính diện tích, chu vi)
+

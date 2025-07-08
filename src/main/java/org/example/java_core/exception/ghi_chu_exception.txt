@@ -1,0 +1,7 @@
+exception
+Tham khảo slide 8 S Learn Java Core
+
+exception method
+try - catch
+throw
+User-defined Exceptions

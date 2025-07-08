@@ -1,0 +1,2 @@
+thread
+Tham khảo slide 7 S Learn Java Core
