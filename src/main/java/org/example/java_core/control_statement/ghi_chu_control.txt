@@ -6,6 +6,6 @@ switch
 
 while
 do-while
-for
+for, for-each
 Nested Loops (có thể demo hình tam giác)
 break/continue
