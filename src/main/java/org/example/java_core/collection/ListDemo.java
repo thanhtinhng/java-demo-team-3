@@ -27,10 +27,6 @@ public class ListDemo {
         animals.set(2, "cow");
         System.out.println(animals);
 
-        //Xóa phần tử thứ ..
-        animals.remove(1);
-        System.out.println(animals);
-
         //Lấy kích thước array list
         int size = animals.size();
         System.out.println(size);
