@@ -1,0 +1,28 @@
+Cấu trúc class - Demo OOP hình học
+
+1. Interface: CoTheTinhDienTich
+   └─ Định nghĩa phương thức:
+      + double tinhDienTich()
+
+2. Abstract class: HinhHoc implements CoTheTinhDienTich
+   └─ Thuộc tính chung: id
+   └─ Có thể có phương thức cụ thể và phương thức trừu tượng
+
+3. Các lớp con kế thừa từ HinhHoc:
+   ├── HinhChuNhat extends HinhHoc
+   ├── HinhTamGiacDeu extends HinhHoc
+   └── HinhTron extends HinhHoc
+
+4. HinhVuong extends HinhChuNhat
+   └─ Là một trường hợp đặc biệt của hình chữ nhật có cạnh bằng nhau
+
+5. ListHinhHoc
+   └─ Chứa danh sách các HinhHoc (ArrayList<HinhHoc>)
+   └─ Có phương thức:
+      + printList()           → In danh sách các hình (đa hình)
+      + printListHinhTron()          → Dùng instanceof để lọc (có cast)
+      + các phương thức xử lý khác (nếu cần)
+
+6. Main class: Test_Inheritance
+   └─ Tạo đối tượng ListHinhHoc
+   └─ Gọi các hàm để kiểm tra tính kế thừa, đa hình, ...
