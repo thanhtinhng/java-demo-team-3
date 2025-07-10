@@ -75,16 +75,18 @@ public class SetDemo {
         // HashSet không thể sort trực tiếp vì không có thứ tự
         System.out.println("\nHashSet khong the sort truc tiep vì khong co thu tu");
 
-        // ✅ loop
-        animals.add("dog");
-        animals.add("cat");
-        animals.add("duck");
-        animals.add("chicken");
-        animals.add("horse");
+
+        //loop
+        Set<Integer> numbers = new HashSet<>();
+        numbers.add(1);
+        numbers.add(4);
+        numbers.add(3);
+        numbers.add(4); // 4 đã tồn tại. Vì là Set nên không cho phép phần tử trùng
 
         System.out.println("\nLoop:");
-        for (String animal : animals) {
-            System.out.print(animal + " ");
-        }
+        for (Integer number : numbers) {
+            System.out.print(number + " ");
+        } //out: 1 3 4
+
     }
 }
