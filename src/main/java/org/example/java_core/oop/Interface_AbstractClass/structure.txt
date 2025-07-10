@@ -1,0 +1,10 @@
+  IFlyable      ISwimable      ISound
+     \            /              |
+      \          /               |
+       \        /                |
+        \      /                 |
+        IDuckLike (interface)     |
+              \                 /
+               \               /
+                \             /
+                   Duck (class)
