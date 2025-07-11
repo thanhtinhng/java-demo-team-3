@@ -1,0 +1,60 @@
+✅ Test Case 1: Nhập thành công
+Mục	                Giá trị
+Loại xe	            Ô tô
+Số xe	            A1234
+Hãng sản xuất	    Toyota
+Năm sản xuất	    2022
+Màu xe	            Đỏ
+
+CMND	            123456789012
+Họ tên	            Nguyễn Văn A
+Email	            a@gmail.com
+Số chỗ ngồi	        5
+Động cơ	            Xăng
+
+Kết quả mong đợi	Thêm phương tiện thành công ✅
+
+❌ Test Case 2: Sai thông tin xe
+Mục	Giá             trị
+Loại xe	            Ô tô
+Số xe	            ABC (❌ sai định dạng)
+Hãng sản xuất      	Vinfast (❌ không hợp lệ)
+Năm sản xuất	    2022
+Màu xe          	Xanh
+
+CMND	            123456789012
+Họ tên	            Nguyễn Văn B
+Email	            b@gmail.com
+Số chỗ ngồi	        4
+Động cơ	            Diesel
+Kết quả mong đợi	Báo lỗi: Số xe hoặc hãng không hợp lệ ❌
+
+❌ Test Case 3: Sai thông tin người dùng
+Mục	Giá             trị
+Loại xe	            Xe máy
+Số xe	            Z9999
+Hãng sản xuất	    Honda
+Năm sản xuất	    2023
+Màu xe	            Đen
+
+CMND	            12345 (❌ không đủ 12 số)
+Họ tên	            Nguyễn Văn C
+Email	            saiemail.com (❌ không hợp lệ)
+Dung tích	        150
+
+Kết quả mong đợi	Báo lỗi: CMND hoặc email không hợp lệ ❌
+
+❌ Test Case 4: Sai cả thông tin xe và chủ xe
+Mục	            Giá trị
+Loại xe	        Xe tải
+Số xe	        123456 (❌ dài quá 5 ký tự)
+Hãng sản xuất	BMW (❌ không hợp lệ)
+Năm sản xuất	2015
+Màu xe	        Bạc
+
+CMND	        abc123 (❌ chứa chữ)
+Họ tên	        Nguyễn Văn D
+Email	        x@. (❌ định dạng sai)
+Tải trọng	    3.5
+
+Kết quả mong đợi	Báo lỗi cả xe và người dùng ❌

@@ -1,6 +1,7 @@
 package org.example.java_core.Practice.Practice3.Model;
 
 import java.time.Year;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -12,6 +13,15 @@ public class Validator {
 
     public static boolean isValidNumber(String number) {
         return number != null && number.length() == 5;
+    }
+
+    public static boolean isDuplicateNumber(String number, ArrayList<Vehicles> list) {
+        for (Vehicles v : list) {
+            if (v.getNumber().equalsIgnoreCase(number)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static boolean isValidManufacturer(String manufacturer) {
