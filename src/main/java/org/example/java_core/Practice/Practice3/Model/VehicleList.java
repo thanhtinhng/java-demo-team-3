@@ -1,5 +1,6 @@
 package org.example.java_core.Practice.Practice3.Model;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -149,15 +150,20 @@ public class VehicleList {
     }
 
     //3. Tìm phương tiện của chủ xe theo số CMND
-    public Vehicles findVehicleByCMND(String CMND) {
+    public ArrayList<Vehicles> findVehicleByCMND(String CMND) {
+        ArrayList<Vehicles> list = new ArrayList<>();
+        boolean flag = false;
         for (Vehicles vehicle : vehiclesList) {
             if (vehicle.getCMND().equalsIgnoreCase(CMND)) {
                 System.out.println("Tìm thấy xe!");
-                return vehicle;
+                list.add(vehicle);
+                flag = true;
             }
         }
-        System.out.println("Không tìm thấy xe..");
-        return null;
+        if (!flag) {
+            System.out.println("Không tìm thấy xe..");
+        }
+        return list;
     }
 
     //4. Xóa toàn bộ phương tiện của một hãng sản xuất bất kỳ
