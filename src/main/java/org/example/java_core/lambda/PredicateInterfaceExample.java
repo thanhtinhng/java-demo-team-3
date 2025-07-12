@@ -3,7 +3,7 @@ import java.util.function.Predicate;
 import java.util.Arrays;
 import java.util.List;
 
-public class PredicateExample {
+public class PredicateInterfaceExample {
     public static void main(String[] args) {
         List<String> names = Arrays.asList("An", "Linh", "Tom", "Minh", "Bo");
 

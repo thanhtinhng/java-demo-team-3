@@ -17,7 +17,7 @@ class Student {
     }
 }
 
-public class ComparatorExample {
+public class LambdaComparatorExample {
     public static void main(String[] args) {
         List<Student> students = Arrays.asList(
             new Student("Linh", 8.5),
