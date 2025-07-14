@@ -35,5 +35,16 @@ public class TestPr3 {
 
         vehicleList.printVehiclesList();
 
+        System.out.println("\n");
+
+        System.out.println(vehicleList.findMaxManufacturer());
+
+        System.out.println("\n");
+
+        vehicleList.sortByDescending();
+
+        System.out.println("\n");
+
+        vehicleList.countVehiclesByType();
     }
 }

@@ -1,9 +1,7 @@
 package org.example.java_core.Practice.Practice3.Model;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Scanner;
+import java.util.*;
 
 public class VehicleList {
 
@@ -186,6 +184,67 @@ public class VehicleList {
             System.out.println("Xóa thành công tất cả xe của hãng: " + manufacturer);
         } else {
             System.out.println("Không tìm thấy xe nào của hãng: " + manufacturer);
+        }
+    }
+
+    //5. Cho biết hãng nào có số lượng phương tiện nhiều nhất đang được quản lý
+    public String findMaxManufacturer() {
+        Map<String, Integer> manufacturerMap = new HashMap<>();
+
+        for (Vehicles vehicle : vehiclesList) {
+            String manuf = vehicle.getManufacturer();
+            manufacturerMap.put(manuf, manufacturerMap.getOrDefault(manuf, 0) + 1);
+        }
+
+        String maxManufacturer = null;
+        int maxNumber = 0;
+        for (Map.Entry<String, Integer> entry : manufacturerMap.entrySet()) {
+            if (entry.getValue() > maxNumber) {
+                maxNumber = entry.getValue();
+                maxManufacturer = entry.getKey();
+            }
+        }
+
+        return ("Hãng có nhiều phương tiện nhất: " + maxManufacturer + " (" + maxNumber + " chiếc)");
+    }
+
+    //6.Sắp xếp phương tiện theo số lượng (giảm dần)
+    public void sortByDescending() {
+        Map<Class<? extends Vehicles>, Integer> vehicleType = new HashMap<>();
+
+        for (Vehicles vehicle : vehiclesList) {
+            Class<? extends Vehicles> type = vehicle.getClass();
+            vehicleType.put(type, vehicleType.getOrDefault(type, 0) + 1);
+        }
+
+        // sắp xếp giảm dầm theo số lượng, tăng dần theo tên
+        vehiclesList.sort((v1, v2) -> {
+            int count1 = vehicleType.get(v1.getClass());
+            int count2 = vehicleType.get(v2.getClass());
+
+            if (count1 != count2) {
+                return Integer.compare(count2, count1); // Sắp giảm dần theo số lượng
+            } else {
+                return v1.getClass().getSimpleName().compareTo(v2.getClass().getSimpleName()); // So sánh phụ để tránh giữ nguyên
+            }
+        });
+
+        for (Vehicles vehicle : vehiclesList) {
+            System.out.println(vehicle);
+        }
+    }
+
+    //7. Thống kê số lượng mỗi loại phương tiện đang được quản lý
+    public void countVehiclesByType() {
+        Map<Class<? extends Vehicles>, Integer> vehicleType = new HashMap<>();
+
+        for (Vehicles vehicle : vehiclesList) {
+            Class<? extends Vehicles> type = vehicle.getClass();
+            vehicleType.put(type, vehicleType.getOrDefault(type, 0) + 1);
+        }
+
+        for (Map.Entry<Class<? extends Vehicles>, Integer> entry : vehicleType.entrySet()) {
+            System.out.println(entry.getKey().getSimpleName() + ": " + entry.getValue() + " chiếc");
         }
     }
 
