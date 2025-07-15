@@ -8,6 +8,7 @@ Nắm vững kiến thức Java Core và các Framework trong hệ sinh thái Sp
 - Spring Core
 - Spring JPA
 - Spring Boot
+- MySQL
 
 ## 👥 Thành viên nhóm
 
