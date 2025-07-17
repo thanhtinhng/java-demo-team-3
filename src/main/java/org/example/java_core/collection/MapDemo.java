@@ -65,5 +65,9 @@ public class MapDemo {
         for (Map.Entry<Integer, String> entry : animalMap.entrySet()) {
             System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
         }
+
+        System.out.println("\n" + animalMap.keySet());
+        System.out.println(animalMap.values());
+        System.out.println(animalMap.entrySet());
     }
 }
