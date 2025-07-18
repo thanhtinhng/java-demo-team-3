@@ -105,6 +105,7 @@ CREATE TABLE Bookings (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     showtime_id INT NOT NULL,
+    total_price DECIMAL(10, 2) NOT NULL,
     status INT NOT NULL DEFAULT 0, -- 0: Pending, 1: Confirmed, 2: Cancelled, 3: Expired (Hết hạn giữ vé do quá thời gian thanh toán)
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES Users(id),

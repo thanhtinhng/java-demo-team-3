@@ -57,8 +57,8 @@ INSERT INTO Showtimes (movie_id, hall_id, start_time, end_time, status, price) V
 (1, 1, '2025-07-20 18:30:00', '2025-07-20 21:00:00', 1, 90000);
 
 -- 11. Bookings
-INSERT INTO Bookings (user_id, showtime_id, status) VALUES
-(1, 1, 1);
+INSERT INTO Bookings (user_id, showtime_id, total_price, status) VALUES
+(1, 1, 180000, 1);
 
 -- 12. BookingSeats
 INSERT INTO BookingSeats (booking_id, seat_id) VALUES
